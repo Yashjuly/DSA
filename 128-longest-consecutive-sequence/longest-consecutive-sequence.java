@@ -9,17 +9,17 @@ class Solution {
 
         for(int num : nums){
             int currentLongest =1;
-            int currentnum= num;
-            visited.put(currentnum, true);
+            // int num= num;
+            visited.put(num, true);
 
-            int nextnum = currentnum+1;
+            int nextnum = num+1;
             while (visited.containsKey(nextnum) && visited.get(nextnum) == false){
                 currentLongest++;
                 visited.put(nextnum,Boolean.TRUE);
                 nextnum ++;
             }
 
-            int prevnum = currentnum-1;
+            int prevnum = num-1;
             while (visited.containsKey(prevnum) && visited.get(prevnum) == false){
                 currentLongest++;
                 visited.put(prevnum,Boolean.TRUE);
